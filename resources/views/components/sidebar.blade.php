@@ -4,14 +4,15 @@ $links = [
         "href" => "dashboard",
         "text" => "Dashboard",
         "is_multi" => false,
+        "icon" => "fas fa-fire"
     ],
     [
         "href" => [
             [
                 "section_text" => "User",
                 "section_list" => [
-                    ["href" => "user", "text" => "Data User"],
-                    ["href" => "user.new", "text" => "Buat User"]
+                    ["href" => "user", "text" => "Data Mahasiswa"],
+                    // ["href" => "user.new", "text" => "Buat User"]
                 ]
             ]
         ],
@@ -19,6 +20,7 @@ $links = [
         "is_multi" => true,
     ],
     [
+<<<<<<< HEAD
         "href" => [
             [
                 "section_text" => "Assesment",
@@ -70,6 +72,13 @@ $links = [
         "text" => "Konsultasi",
         "is_multi" => true,
     ],
+=======
+        "href" => "assessment",
+        "text" => "Assessment",
+        "is_multi" => false,
+        "icon" => "fas fa-book"
+    ]
+>>>>>>> a2af9eb4014f605ea800b176b7202bad4581754f
 ];
 $navigation_links = array_to_object($links);
 @endphp
@@ -89,7 +98,7 @@ $navigation_links = array_to_object($links);
             <li class="menu-header">{{ $link->text }}</li>
             @if (!$link->is_multi)
             <li class="{{ Request::routeIs($link->href) ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route($link->href) }}"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a class="nav-link" href="{{ route($link->href) }}"><i class="{{ $link->icon }}"></i><span>{{ $link->text }}</span></a>
             </li>
             @else
                 @foreach ($link->href as $section)
@@ -113,5 +122,6 @@ $navigation_links = array_to_object($links);
             @endif
         </ul>
         @endforeach
+
     </aside>
 </div>
