@@ -25,7 +25,6 @@ Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
 
-<<<<<<< HEAD
     Route::get('/assesment', [ AssesmentController::class, "index_view" ])->name('assesment');
     Route::view('/assesment/new', "pages.assesment.assesment-new")->name('assesment.new');
     Route::view('/assesment/edit/{assesmentId}', "pages.assesment.assesment-edit")->name('assesment.edit');
@@ -41,8 +40,4 @@ Route::group(["middleware" => ['auth:sanctum', 'verified']], function () {
     Route::get('/konsultasi', [ KonsultasiController::class, "index_view" ])->name('konsultasi');
     Route::view('/konsultasi/new', "pages.konsultasi.konsultasi-new")->name('konsultasi.new');
     Route::view('/konsultasi/edit/{konsultasiId}', "pages.konsultasi.konsultasi-edit")->name('konsultasi.edit');
-=======
-    Route::get('/assessment', function ($id) {
-    })->name('assessment');
->>>>>>> a2af9eb4014f605ea800b176b7202bad4581754f
 });
