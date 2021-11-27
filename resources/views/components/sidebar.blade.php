@@ -18,6 +18,58 @@ $links = [
         "text" => "User",
         "is_multi" => true,
     ],
+    [
+        "href" => [
+            [
+                "section_text" => "Assesment",
+                "section_list" => [
+                    ["href" => "assesment", "text" => "Data Assesment"],
+                    ["href" => "assesment.new", "text" => "Buat Assesment"]
+                ]
+            ]
+        ],
+        "text" => "Assesment",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
+                "section_text" => "Mahasiswa",
+                "section_list" => [
+                    ["href" => "mahasiswa", "text" => "Data Mahasiswa"],
+                    ["href" => "mahasiswa.new", "text" => "Buat Mahasiswa"]
+                ]
+            ]
+        ],
+        "text" => "Mahasiswa",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
+                "section_text" => "Rekam Medik",
+                "section_list" => [
+                    ["href" => "rekamMedik", "text" => "Data Rekam Medik"],
+                    ["href" => "rekamMedik.new", "text" => "Buat Rekam Medik"]
+                ]
+            ]
+        ],
+        "text" => "Rekam Medik",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
+                "section_text" => "Konsultasi",
+                "section_list" => [
+                    ["href" => "konsultasi", "text" => "Data Konsultasi"],
+                    ["href" => "konsultasi.new", "text" => "Buat Konsultasi"]
+                ]
+            ]
+        ],
+        "text" => "Konsultasi",
+        "is_multi" => true,
+    ],
 ];
 $navigation_links = array_to_object($links);
 @endphp
